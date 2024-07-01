@@ -88,6 +88,6 @@ def upload():
     drive_service.files().create(body=file_metadata, media_body=media, fields='id').execute()
 
     return jsonify({'result': 'success'})
-
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Change host='0.0.0.0' to listen on all network interfaces
+    app.run(host='0.0.0.0', port=5000, debug=True)
