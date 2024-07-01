@@ -16,7 +16,7 @@ function uploadImage() {
     .then((data) => {
       console.log("Upload success:", data);
       document.getElementById("output").innerHTML = `
-        <p>Document uploaded to Google Drive successfully.</p>
+        <p>Document uploaded successfully.</p>
         <img src="/static/processed_image.jpg" alt="Processed Image">`;
     })
     .catch((error) => {
